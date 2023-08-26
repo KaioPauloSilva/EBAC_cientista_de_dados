@@ -1,3 +1,5 @@
+from typing import Any
+
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -5,10 +7,10 @@ import os
 import matplotlib.pyplot as plt
 import sys
 
-script_name = sys.argv[0]
-print(f'O nome do script é :', script_name)
-meses = sys.argv[1:]
-for mes in meses:
+SCRIPT_NAME = sys.argv[0]
+print(f'O nome do script é :', SCRIPT_NAME)
+MESES = sys.argv[1:]
+for mes in MESES:
     URL = './input/SINASC_RO_2019_' + mes + '.csv'
     df = pd.read_csv(URL)
 
